@@ -1,3 +1,5 @@
+package exercicio2;
+
 import java.util.Scanner;
 
 class Main{
@@ -56,10 +58,6 @@ class Main{
             }
 
         }while(opt != 0);
-
-
-
-        
 
 
         leitor.close();
