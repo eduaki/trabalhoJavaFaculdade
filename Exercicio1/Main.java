@@ -72,7 +72,7 @@ class Main {
                     }
                     float div = Calculadora.div(n1, n2);
                 
-                    System.out.println("O resultado da subtração é: " + div);
+                    System.out.println("O resultado da divisão é: " + div);
 
             }   
 
