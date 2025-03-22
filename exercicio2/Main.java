@@ -3,6 +3,7 @@ package exercicio2;
 import java.util.Scanner;
 
 class Main{
+//// biblioteca
     public static void main(String[] args){
         Scanner leitor = new Scanner(System.in);
         int qtdLivros = 2;

@@ -2,7 +2,7 @@ package Exercicio1;
 import java.util.Scanner;
 
 class Main {
-
+//// calculadora
     public static void main(String[] args){
 
         Scanner leitor = new Scanner(System.in);
