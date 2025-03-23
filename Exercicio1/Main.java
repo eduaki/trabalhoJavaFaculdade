@@ -2,7 +2,7 @@ package Exercicio1;
 import java.util.Scanner;
 
 class Main {
-
+//// calculadora
     public static void main(String[] args){
 
         Scanner leitor = new Scanner(System.in);
@@ -72,7 +72,7 @@ class Main {
                     }
                     float div = Calculadora.div(n1, n2);
                 
-                    System.out.println("O resultado da subtração é: " + div);
+                    System.out.println("O resultado da divisão é: " + div);
 
             }   
 
