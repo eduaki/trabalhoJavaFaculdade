@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class Main {
     static float saldo = 0;
         public static void main(String[] args){
-            
+            /// Sistema bancário simples.
             Scanner leitor = new Scanner(System.in);
     
             HashMap<String, ContaBancaria> cadastros = new HashMap<>();
