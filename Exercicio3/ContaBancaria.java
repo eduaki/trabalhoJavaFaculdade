@@ -1,3 +1,4 @@
+package Exercicio3;
 import java.util.Random;
 
 public class ContaBancaria {
@@ -13,14 +14,12 @@ public class ContaBancaria {
 
         Random gerador = new Random();
 
-        this.numeroConta = gerador.nextInt();
+        this.numeroConta = 1000 + gerador.nextInt(9999);
     }
+    public void saque(float tirar){
+        this.saldo -= tirar;
 
-    public float saque(float valor, float tirar){
-        float resultado = valor - tirar;
-        return resultado;
     }
-
     public void setNumeroConta(int numeroConta){
         this.numeroConta = numeroConta;  
     }
@@ -46,6 +45,11 @@ public class ContaBancaria {
     }
     public String getNome(){
         return nome;
+    }
+    public void deposito(float valor){
+
+        this.saldo += valor;
+        System.out.println("Saldo atual: " + saldo);
     }
 
     
