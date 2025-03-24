@@ -3,7 +3,7 @@ package Exercicio7;
 import java.util.Random;
 
 public class Produto {
-  Random random = new Random();
+  private Random random = new Random();
   
   String nome;
   private int sku = 100000 + random.nextInt(999999);
@@ -19,6 +19,10 @@ public class Produto {
 
   public void diminuiEstoque(int num){
     this.qtdEstoque -= num;
+  }
+
+  public void aumentaEstoque(int num){
+    this.qtdEstoque += num;
   }
 
   public int getSku() {
