@@ -85,7 +85,7 @@ public class Main {
                         System.out.println("----Criar conta-----");
                         System.out.println("informe o cpf: ");
                         String cpfNovo = leitor.nextLine();
-
+                    
                         if(cadastros.get(cpfNovo)!= null){
                             System.out.println("CPF já possui conta.");
                             System.out.println("-----------------------------");
