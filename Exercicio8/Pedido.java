@@ -13,6 +13,7 @@ public class Pedido {
     /*
     * a função ArrayList eu achei com o GPT, não tava entendendo como ia fazer funcionar com array normal,
     * e achei bem interessante como ela funciona, bem util!!!
+    * (agora sei como usa o HashMap, bem mais performatico, vou usar em outras oportunidades...)
     */
     static ArrayList<Pedido> pedidos = new ArrayList<>(); 
     
@@ -41,7 +42,7 @@ public class Pedido {
   
           default: 
             System.out.println("\nERRO: escolha um tamanho valido de pizza");
-          break;
+            return;
         }
     
         pedidos.add(new Pedido(nomePizza, tamanho, valor, endEntrega));
@@ -82,8 +83,14 @@ public class Pedido {
       float soma = 0;
       float qtd = pedidos.size();
 
+      int qtdCancelados = 0;
       for(int i = 0; i < pedidos.size(); i++){
-        soma += pedidos.get(i).preco;
+        if(!pedidos.get(i).cancelado){
+          soma += pedidos.get(i).preco;
+        }else{
+          qtdCancelados++;
+          qtd -= qtdCancelados;
+        }
       }
 
       float media = soma/qtd;
@@ -96,7 +103,7 @@ public class Pedido {
       DecimalFormat decimal = new DecimalFormat("#.##");
       String mediaconvertida = decimal.format(media);
 
-      System.out.println("\nForam feitos no total: " + pedidos.size() + " pedidos");
+      System.out.println("\nForam feitos no total: " + (pedidos.size() - qtdCancelados) + " pedidos");
       System.out.println("Media de preço dos pedidos: R$" + mediaconvertida);
     }
 
