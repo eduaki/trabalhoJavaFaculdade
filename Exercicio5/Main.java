@@ -118,8 +118,6 @@ public class Main {
 
         } while(opt != 0);
 
-
-
         leitor.close();
     } 
 }
